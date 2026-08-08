@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jannel Partosa | Frontend Developer & UI Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Jannel Partosa</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">Open to Junior Frontend Roles</span>
+      <h1>Crafting simple, intuitive web experiences.</h1>
+      <p class="lead">I’m a Frontend Developer focusing on clean code, responsive interfaces, and accessible design principles.</p>
+      <div class="cta">
+        <a class="btn" href="projects.html">View Projects</a>
+        <a class="btn ghost" href="contact.html">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- Core Skills Section -->
+    <section class="section">
+      <h2 class="section-title">Core Skills</h2>
+      <p class="section-subtext">Click on any skill to explore technical context.</p>
+
+      <div class="skills-container">
+        <div class="chips">
+          <span class="skill-chip" 
+                data-title="HTML5 & CSS3" 
+                data-desc="The foundational building blocks of the web. Used to build structured, semantic layouts and styled with modern CSS features like Flexbox, CSS Grid, custom properties, and animations.">
+            HTML5 & CSS3
+          </span>
+
+          <span class="skill-chip" 
+                data-title="JavaScript (ES6+)" 
+                data-desc="Core programming language of the web. Experienced with modern features including ES Modules, Async/Await, Fetch API, Arrow Functions, and DOM manipulation to power dynamic web apps.">
+            JavaScript (ES6+)
+          </span>
+
+          <span class="skill-chip" 
+                data-title="Responsive Web Design" 
+                data-desc="Crafting flexible, fluid layouts using CSS Media Queries and mobile-first principles to ensure seamless viewing across smartphones, tablets, and desktop displays.">
+            Responsive Web Design
+          </span>
+
+          <span class="skill-chip" 
+                data-title="UI/UX Prototyping" 
+                data-desc="Designing user-centered web interfaces focused on visual clarity, intuitive navigation flows, interactive states, and consistent branding aesthetics.">
+            UI/UX Prototyping
+          </span>
+
+          <span class="skill-chip" 
+                data-title="Version Control (Git)" 
+                data-desc="Tracking changes, managing feature branches, and collaborating on software projects using Git commands and hosting services like GitHub.">
+            Version Control (Git)
+          </span>
+
+          <span class="skill-chip" 
+                data-title="RESTful APIs & Fetch" 
+                data-desc="Connecting frontend user interfaces to backend servers and web services by asynchronously retrieving, sending, and parsing JSON data.">
+            RESTful APIs & Fetch
+          </span>
+
+          <span class="skill-chip" 
+                data-title="Web Accessibility (a11y)" 
+                data-desc="Implementing ARIA landmarks, semantic tags, keyboard navigation, and high-contrast visuals to ensure web experiences are accessible to users with disabilities.">
+            Web Accessibility (a11y)
+          </span>
+
+          <span class="skill-chip" 
+                data-title="AI-Assisted Workflow" 
+                data-desc="Leveraging AI tools (ChatGPT, GitHub Copilot) for code refactoring, rapid debugging, test case generation, and iterating on copy writing.">
+            AI-Assisted Workflow
+          </span>
+        </div>
+
+        <!-- Skill Insights Panel -->
+        <div id="skill-detail-panel" class="skill-panel">
+          <button class="panel-close" id="panel-close-btn" aria-label="Close panel">&times;</button>
+          <div class="panel-header">
+            <span class="panel-badge">Skill Insights</span>
+            <h3 id="panel-title">Select a skill</h3>
+          </div>
+          <p id="panel-desc">Click any chip on the left to see detailed technical context and practical usage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Workflow Section -->
+    <section class="section">
+      <h2 class="section-title">Tools & Workflow</h2>
+      <p class="section-subtext">Click on any tool to see my practical usage and workflow integration.</p>
+
+      <div class="tools-container">
+        <div class="tools-categories">
+          <!-- Development Category -->
+          <div class="tool-category">
+            <h3 class="category-subtitle">Development</h3>
+            <div class="tools-grid">
+              <div class="tool-card" 
+                   data-title="VS Code" 
+                   data-desc="Primary IDE configured with ESLint, Prettier, Live Server, and Git integration for streamlined code formatting, fast execution, and rapid frontend development.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon">
+                <span class="tool-name">VS Code</span>
+              </div>
+              <div class="tool-card" 
+                   data-title="Git" 
+                   data-desc="Utilized for version control, managing clean repository histories, branching strategy for feature releases, and command-line version tracking.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tool-icon">
+                <span class="tool-name">Git</span>
+              </div>
+              <div class="tool-card" 
+                   data-title="GitHub Pages" 
+                   data-desc="Used for continuous deployment and hosting static web applications directly from GitHub repository source files.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Pages" class="tool-icon">
+                <span class="tool-name">GitHub Pages</span>
+              </div>
+              <div class="tool-card" 
+                   data-title="Netlify" 
+                   data-desc="Preferred deployment platform for automated continuous integration, custom domain routing, SSL management, and staging environments.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" alt="Netlify" class="tool-icon">
+                <span class="tool-name">Netlify</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design Category -->
+          <div class="tool-category">
+            <h3 class="category-subtitle">Design</h3>
+            <div class="tools-grid">
+              <div class="tool-card" 
+                   data-title="Figma" 
+                   data-desc="Core design platform used for high-fidelity UI wireframing, creating component systems, auto-layout design setups, and developer handoffs.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="tool-icon">
+                <span class="tool-name">Figma</span>
+              </div>
+              <div class="tool-card" 
+                   data-title="Canva" 
+                   data-desc="Utilized for fast visual marketing assets, presentation slides, quick graphics generation, and social media branding support.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" class="tool-icon">
+                <span class="tool-name">Canva</span>
+              </div>
+              <div class="tool-card" 
+                   data-title="Adobe XD" 
+                   data-desc="Secondary design tool used for creating interactive web prototypes, micro-animation design, and vector UI asset export.">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD" class="tool-icon">
+                <span class="tool-name">Adobe XD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI & Productivity Category -->
+          <div class="tool-category">
+            <h3 class="category-subtitle">AI & Optimization</h3>
+            <div class="tools-grid">
+              <div class="tool-card" 
+                   data-title="ChatGPT" 
+                   data-desc="Used as a coding assistant to accelerate logic refactoring, troubleshoot complex bugs, write clean documentation, and brainstorm UI variations.">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="tool-icon">
+                <span class="tool-name">ChatGPT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool Insights Panel -->
+        <div id="tool-detail-panel" class="skill-panel">
+          <button class="panel-close" id="tool-panel-close-btn" aria-label="Close panel">&times;</button>
+          <div class="panel-header">
+            <span class="panel-badge">Tool Insights</span>
+            <h3 id="tool-panel-title">Select a tool</h3>
+          </div>
+          <p id="tool-panel-desc">Click any tool card above to view workflow context and practical application.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Interests & Hobbies</h2>
+      <p class="body-text">Beyond coding, I spend my time exploring mobile photography, minimalism in graphic design, coffee brewing techniques, and micro-interaction animations.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Jannel Partosa. Built for portfolio submission.</p>
+      <div class="footer-nav">
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ------------------------------------
+      // 1. SKILLS PANEL LOGIC
+      // ------------------------------------
+      const chips = document.querySelectorAll('.skill-chip');
+      const skillTitle = document.getElementById('panel-title');
+      const skillDesc = document.getElementById('panel-desc');
+      const skillCloseBtn = document.getElementById('panel-close-btn');
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+
+          const title = chip.getAttribute('data-title');
+          const desc = chip.getAttribute('data-desc');
+
+          skillTitle.textContent = title;
+          skillDesc.textContent = desc;
+        });
+      });
+
+      skillCloseBtn.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        skillTitle.textContent = "Select a skill";
+        skillDesc.textContent = "Click any chip on the left to see detailed technical context and practical usage.";
+      });
+
+      // ------------------------------------
+      // 2. TOOLS PANEL LOGIC
+      // ------------------------------------
+      const toolCards = document.querySelectorAll('.tool-card');
+      const toolTitle = document.getElementById('tool-panel-title');
+      const toolDesc = document.getElementById('tool-panel-desc');
+      const toolCloseBtn = document.getElementById('tool-panel-close-btn');
+
+      toolCards.forEach(card => {
+        card.addEventListener('click', () => {
+          toolCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+
+          const title = card.getAttribute('data-title');
+          const desc = card.getAttribute('data-desc');
+
+          toolTitle.textContent = title;
+          toolDesc.textContent = desc;
+        });
+      });
+
+      toolCloseBtn.addEventListener('click', () => {
+        toolCards.forEach(c => c.classList.remove('active'));
+        toolTitle.textContent = "Select a tool";
+        toolDesc.textContent = "Click any tool card above to view workflow context and practical application.";
+      });
+    });
+  </script>
+</body>
+</html>
