@@ -6,146 +6,6 @@
   <title>Work | Jannel Partosa</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  
-  <!-- Canvas Confetti Library -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-
-  <style>
-    /* Demo Modal Styles */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(4px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      z-index: 1000;
-    }
-
-    .modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal-box {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      transform: scale(0.9);
-      transition: transform 0.3s ease;
-      position: relative;
-      z-index: 1002;
-    }
-
-    .modal-overlay.active .modal-box {
-      transform: scale(1);
-    }
-
-    .modal-box h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      color: #111827;
-    }
-
-    .modal-box p {
-      color: #4b5563;
-      margin: 1rem 0 1.5rem;
-      line-height: 1.5;
-    }
-
-    .modal-btn {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.5rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .modal-btn:hover {
-      background-color: #1d4ed8;
-    }
-
-    /* Container for floating balloons */
-    #balloonContainer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1001;
-      overflow: hidden;
-    }
-
-    /* Floating Profile Balloon Styling */
-    .profile-balloon {
-      position: absolute;
-      bottom: -180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: 0;
-    }
-
-    .profile-balloon img {
-      width: 90px;
-      height: 110px;
-      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; /* Balloon shape */
-      object-fit: cover;
-      border: 4px solid #ffffff;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .profile-balloon::after {
-      content: '';
-      width: 2px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.8);
-      margin-top: -2px;
-    }
-
-    /* Balloon floating animation */
-    .profile-balloon.animate {
-      animation: floatUpBalloon 3.5s ease-in-out forwards;
-    }
-
-    @keyframes floatUpBalloon {
-      0% {
-        bottom: -180px;
-        opacity: 0;
-        transform: translateX(0) rotate(0deg);
-      }
-      15% {
-        opacity: 1;
-      }
-      50% {
-        transform: translateX(-25px) rotate(-12deg);
-      }
-      75% {
-        transform: translateX(25px) rotate(12deg);
-      }
-      100% {
-        bottom: 115vh;
-        opacity: 1;
-        transform: translateX(-10px) rotate(-5deg);
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -162,30 +22,14 @@
 
   <main class="container">
     <h1>Selected Projects</h1>
-    <p class="lead">A collection of web development and interface design projects.</p>
+    <p class="lead">A collection of website builds and mobile product work that reflects how I think, design, and ship.</p>
 
-    <div class="grid">
-      <article class="card">
-        <div class="card-tag">Web Development</div>
-        <h3>E-Commerce Product Interface</h3>
-        <p>A fully responsive product page layout featuring custom filtering, clean state transitions, and accessible UI controls.</p>
-        <a class="card-link project-demo-btn" href="#">View Project →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-tag">UI/UX Design</div>
-        <h3>Minimalist Task Dashboard</h3>
-        <p>A lightweight, distraction-free interface concept designed in Figma and prototyped using custom HTML/CSS grids.</p>
-        <a class="card-link project-demo-btn" href="#">View Project →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-tag">Frontend Build</div>
-        <h3>Responsive Portfolio System</h3>
-        <p>A modern static portfolio template built with lightweight styling, semantic components, and fast loading performance.</p>
-        <a class="card-link project-demo-btn" href="#">View Project →</a>
-      </article>
-    </div>
+    <!--
+      Update this array with your real projects,
+      links, and descriptions whenever you're ready.
+      Each project can be a website or a mobile app.
+    -->
+    <div id="projectsGrid" class="grid"></div>
   </main>
 
   <footer class="site-footer">
@@ -198,89 +42,60 @@
     </div>
   </footer>
 
-  <!-- Container for the 5 profile balloons -->
-  <div id="balloonContainer"></div>
-
-  <!-- Modal Popup -->
-  <div class="modal-overlay" id="demoModal">
-    <div class="modal-box">
-      <h2>🎉 Surprise!</h2>
-      <p>Everything here is just a demo placeholder for now! Stay tuned for actual live projects.</p>
-      <button class="modal-btn" id="closeModal">Got it!</button>
-    </div>
-  </div>
-
   <script>
-    const modal = document.getElementById('demoModal');
-    const closeBtn = document.getElementById('closeModal');
-    const projectBtns = document.querySelectorAll('.project-demo-btn');
-    const balloonContainer = document.getElementById('balloonContainer');
-
-    // Path to your profile picture (Change this to your actual image file!)
-    const profileImgSrc = "profile.jpg";
-
-    // Function to trigger confetti burst
-    function triggerConfetti() {
-      if (typeof confetti === 'function') {
-        confetti({
-          particleCount: 120,
-          spread: 80,
-          origin: { y: 0.6 }
-        });
+    const projects = [
+      {
+        category: 'Web Development',
+        title: 'E-Commerce Product Interface',
+        description: 'A fully responsive product page layout featuring custom filtering, clean state transitions, and accessible UI controls.',
+        type: 'Website',
+        demo: 'https://example.com',
+        repo: 'https://github.com/'
+      },
+      {
+        category: 'UI/UX Design',
+        title: 'Minimalist Task Dashboard',
+        description: 'A lightweight, distraction-free interface concept designed for focus, clarity, and quick daily planning.',
+        type: 'Website',
+        demo: 'https://example.com',
+        repo: 'https://github.com/'
+      },
+      {
+        category: 'Frontend Build',
+        title: 'Responsive Portfolio System',
+        description: 'A modern static portfolio template built with semantic markup, performance-minded styling, and an easy-to-edit project structure.',
+        type: 'Website',
+        demo: 'https://example.com',
+        repo: 'https://github.com/'
+      },
+      {
+        category: 'Mobile App',
+        title: 'FitTrack Mobile App',
+        description: 'A mobile-first workout tracker that focuses on quick logging, habit consistency, and offline-friendly activity tracking.',
+        type: 'Mobile',
+        demo: 'https://play.google.com/',
+        repo: 'https://github.com/'
       }
-    }
+    ];
 
-    // Function to create and launch 5 profile balloons
-    function launchBalloons() {
-      balloonContainer.innerHTML = ''; // Clear previous balloons
+    const projectsGrid = document.getElementById('projectsGrid');
 
-      // Horizontal position percentages for the 5 balloons
-      const positions = [10, 28, 48, 68, 85];
+    projectsGrid.innerHTML = projects.map((project) => `
+      <article class="card">
+        <div class="card-tag">${project.category}</div>
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
 
-      positions.forEach((pos, index) => {
-        const balloon = document.createElement('div');
-        balloon.className = 'profile-balloon';
-        balloon.style.left = `${pos}%`;
-
-        // Stagger the start time slightly for a natural floating effect
-        const delay = index * 0.2;
-        balloon.style.animationDelay = `${delay}s`;
-
-        const img = document.createElement('img');
-        img.src = profileImgSrc;
-        img.alt = 'Jannel Balloon';
-
-        balloon.appendChild(img);
-        balloonContainer.appendChild(balloon);
-
-        // Trigger animation
-        setTimeout(() => {
-          balloon.classList.add('animate');
-        }, 10);
-      });
-    }
-
-    // Open modal, fire confetti, and float 5 balloons on click
-    projectBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
-        triggerConfetti();
-        launchBalloons();
-      });
-    });
-
-    // Close modal on button click
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
-
-    // Close modal when clicking outside box
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-      }
-    });
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:auto;">
+          <a class="card-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">
+            ${project.type === 'Mobile' ? 'View App →' : 'Visit Site →'}
+          </a>
+          <a class="card-link" href="${project.repo}" target="_blank" rel="noopener noreferrer">
+            Source →
+          </a>
+        </div>
+      </article>
+    `).join('');
   </script>
 </body>
 </html>
