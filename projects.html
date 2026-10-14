@@ -45,6 +45,15 @@
   <script>
     const projects = [
       {
+        category: 'Educational Tool',
+        title: 'Context-Free Grammar Builder',
+        description: 'Interactive CFG & parse-tree simulator used to teach formal language theory with drag-and-drop rule building, timed challenges, and real-time visual parse trees.',
+        type: 'Website',
+        demo: 'https://jannel08.github.io/CFG/',
+        repo: 'https://github.com/Jannel08/CFG',
+        tech: ['HTML', 'CSS', 'JavaScript']
+      },
+      {
         category: 'Web Development',
         title: 'E-Commerce Product Interface',
         description: 'A fully responsive product page layout featuring custom filtering, clean state transitions, and accessible UI controls.',
@@ -80,22 +89,27 @@
 
     const projectsGrid = document.getElementById('projectsGrid');
 
-    projectsGrid.innerHTML = projects.map((project) => `
-      <article class="card">
-        <div class="card-tag">${project.category}</div>
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
+    function renderProjects() {
+      projectsGrid.innerHTML = projects.map((project) => `
+        <article class="card">
+          <div class="card-tag">${project.category}</div>
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
 
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:auto;">
-          <a class="card-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">
-            ${project.type === 'Mobile' ? 'View App →' : 'Visit Site →'}
-          </a>
-          <a class="card-link" href="${project.repo}" target="_blank" rel="noopener noreferrer">
-            Source →
-          </a>
-        </div>
-      </article>
-    `).join('');
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:auto;">
+            <a class="card-link" href="${project.demo}" target="_blank" rel="noopener noreferrer">
+              ${project.type === 'Mobile' ? 'View App →' : 'Visit Site →'}
+            </a>
+            <a class="card-link" href="${project.repo}" target="_blank" rel="noopener noreferrer">
+              Source →
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Initial render
+    renderProjects();
   </script>
 </body>
 </html>
