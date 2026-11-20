@@ -1,0 +1,214 @@
+/* ===== About page styles (from the original about.html inline <style>) =====
+   Scoped to body.page-about so they don't leak onto other pages. */
+
+:root {
+  --primary-color: #8C6D58;
+  --text-main: #2C2623;
+  --text-muted: #665A52;
+  --card-bg: rgba(250, 247, 242, 0.85);
+  --card-border: rgba(140, 109, 88, 0.18);
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  --radius-lg: 16px;
+}
+
+body.page-about {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:where(body.page-about) .bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+:where(body.page-about) .bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, rgba(250, 247, 242, 0.7) 0%, rgba(240, 235, 228, 0.9) 100%);
+  z-index: -1;
+}
+
+:where(body.page-about) .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+:where(body.page-about) .site-header {
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  background: rgba(250, 247, 242, 0.6);
+  border-bottom: 1px solid var(--card-border);
+}
+
+:where(body.page-about) .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:where(body.page-about) .brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+:where(body.page-about) .nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+:where(body.page-about) .nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+:where(body.page-about) .nav a:hover,
+:where(body.page-about) .nav a.active {
+  color: var(--primary-color);
+}
+
+:where(body.page-about) main {
+  flex: 1;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+:where(body.page-about) .glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow);
+}
+
+:where(body.page-about) .profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+:where(body.page-about) .profile-img-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+:where(body.page-about) .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 8px 20px rgba(140, 109, 88, 0.2);
+}
+
+:where(body.page-about) .profile-info h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+:where(body.page-about) .profile-info .lead {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+:where(body.page-about) .info-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+:where(body.page-about) .info-card {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+:where(body.page-about) .info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+:where(body.page-about) .info-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+:where(body.page-about) .info-card h3::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+:where(body.page-about) .body-text {
+  color: var(--text-muted);
+  font-size: 0.975rem;
+  line-height: 1.7;
+}
+
+:where(body.page-about) .site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--card-border);
+  background: rgba(250, 247, 242, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 640px) {
+  :where(body.page-about) .glass-card {
+    padding: 1.75rem;
+  }
+
+  :where(body.page-about) .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  :where(body.page-about) .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
